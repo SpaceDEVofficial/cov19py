@@ -6,6 +6,8 @@ authors = ["UniqueDevStorm <me@devstorm.kr>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+aiohttp = "^3.7.4"
+xmltodict = "^0.12.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
