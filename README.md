@@ -1,3 +1,4 @@
+![cov19py](<https://media.discordapp.net/attachments/884219304252420118/885318866903916554/-_-001-modified.png>)
 # cov19py
 a corona api python wrapper
 
