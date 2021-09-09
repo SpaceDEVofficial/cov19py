@@ -10,7 +10,7 @@ def now():
 
 def thisWeek():
     return (datetime.datetime.now() - datetime.timedelta(days=datetime.datetime.now().weekday())).strftime('%Y%m%d'), \
-           (datetime.datetime.now() + datetime.timedelta(days=7 - datetime.datetime.now().weekday())).strftime('%Y%m%d')
+           (datetime.datetime.now() + datetime.timedelta(days=6 - datetime.datetime.now().weekday())).strftime('%Y%m%d')
 
 
 class Client:
@@ -25,6 +25,7 @@ class Client:
                 return json.loads(json.dumps(xmltodict.parse(response)))
 
     async def thisweekCorona(self) -> dict:
+        print(f'{self.BASE_URL}&startCreateDt={thisWeek()[0]}&endCreateDt={thisWeek()[1]}')
         async with aiohttp.ClientSession() as session:
             async with session.get(f'{self.BASE_URL}&startCreateDt={thisWeek()[0]}&endCreateDt={thisWeek()[1]}') as res:
                 response = await res.text()
