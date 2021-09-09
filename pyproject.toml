@@ -1,8 +1,10 @@
 [tool.poetry]
-name = "corona.py"
-version = "0.1.0"
+name = "cov19py"
+version = "0.1.1"
 description = ""
-authors = ["UniqueDevStorm <me@devstorm.kr>"]
+authors = ["SpaceDEV"]
+homepage = "https://github.com/SpaceDEVofficial/corona.py"
+repository = "https://github.com/SpaceDEVofficial/corona.py"
 
 [tool.poetry.dependencies]
 python = "^3.8"

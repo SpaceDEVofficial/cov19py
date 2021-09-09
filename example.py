@@ -1,10 +1,11 @@
-import corona
+import cov19py
 import asyncio
 
 
 async def run():
-    crn = corona.Client('Your API Key')
-    print(await crn.todayCorona())
+    crn = cov19py.Client('Your API Key')
+    data = await crn.todayCorona()
+    print(data['response'])
 
 
 asyncio.run(run())
